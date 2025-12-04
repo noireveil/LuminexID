@@ -19,7 +19,6 @@ export default function HomePage() {
     <>
       <Navbar />
       
-      {/* HERO SECTION: Conditional Rendering berdasarkan Login Status */}
       <header className="bg-zinc-900 text-stone-50 border-b-4 border-red-700 pattern-grid">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-24 text-center">
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6 leading-none">
@@ -31,7 +30,6 @@ export default function HomePage() {
 
           <div className="flex flex-col md:flex-row justify-center gap-4 mt-10">
             {isLoggedIn ? (
-              // UX FIX: Tombol langsung ke QR / Scanner jika sudah login
               <>
                 <Link href="/dashboard">
                   <Button className="w-full md:w-auto h-14 text-lg px-8 shadow-[4px_4px_0px_0px_#b91c1c]">
@@ -47,7 +45,6 @@ export default function HomePage() {
                 </Link>
               </>
             ) : (
-              // UX FIX: Tombol Login Besar jika belum login
               <Link href="/login">
                 <Button className="w-full md:w-auto h-14 text-lg px-10 shadow-[6px_6px_0px_0px_#fff] border-white">
                   <LogIn className="mr-2 w-6 h-6" />
@@ -59,7 +56,6 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* EVENT LISTING */}
       <main className="max-w-6xl mx-auto px-6 py-16">
         <div className="flex items-center gap-4 mb-8">
           <div className="h-1 flex-1 bg-zinc-200"></div>

@@ -1,8 +1,6 @@
-export interface User {
-  id: number;
-  name: string;
-  email: string;
-  role: 'USER' | 'STAFF' | 'ADMIN';
+export interface LoginResponse {
+  token: string;
+  expiresIn: number;
 }
 
 export interface Event {
@@ -11,11 +9,13 @@ export interface Event {
   date: string;
   location: string;
   price: number;
-  availableQuota: number;
 }
 
-export interface LoginResponse {
-  token: string;
-  expiresIn: number;
-  user: User;
+export interface Ticket {
+  id: string;
+  eventName: string;
+  status: string;
+  date?: string; 
+  location?: string;
+  qrSignaturePayload?: string;
 }
